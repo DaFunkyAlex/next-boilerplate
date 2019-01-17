@@ -1,0 +1,33 @@
+@import "variables";
+
+a {
+  color: $global-link-color;
+  text-decoration: none;
+  transition: 0.3s ease all;
+
+  &:hover {
+    color: $global-link-color-hover;
+  }
+}
+
+.text-small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-weight-lighter {
+  font-weight: lighter !important;
+}
+.font-weight-normal {
+  font-weight: normal !important;
+}
+.font-weight-bold {
+  font-weight: bold !important;
+}
+.font-weight-bolder {
+  font-weight: bolder !important;
+}

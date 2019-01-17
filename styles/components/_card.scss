@@ -1,0 +1,44 @@
+@import "variables";
+
+.card {
+  box-shadow: 1px 1px 5px rgba(126, 142, 159, 0.1);
+  background: $white;
+  padding: 40px;
+  border-radius: 0;
+  border: none;
+
+  .card-header {
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d7dde4;
+
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      margin-bottom: 0;
+      margin-top: 0;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      font-weight: normal;
+      color: #7e8e9f;
+    }
+  }
+
+  .card-body {
+    padding: 10px 0;
+  }
+
+  .card-footer {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid #d7dde4;
+    font-size: 1.45rem;
+    text-align: right;
+    font-weight: 200;
+  }
+}

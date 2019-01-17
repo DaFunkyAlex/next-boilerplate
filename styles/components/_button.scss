@@ -1,0 +1,60 @@
+@import "variables";
+
+.button {
+  margin: 0;
+  border: none;
+  overflow: visible;
+  font: inherit;
+  color: inherit;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 30px;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  line-height: 38px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transition-property: color, background-color, border-color;
+  transition-property: color, background-color, border-color;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.button-primary {
+    background-color: $primary-color;
+    color: #fff;
+    border: 1px solid transparent;
+  }
+
+  /* Hover + Focus */
+
+  &.button-primary:hover,
+  &.button-primary:focus {
+    background-color: darken($primary-color, 5%);
+    color: #fff;
+  }
+
+  /* OnClick + Active */
+
+  &.button-primary:active,
+  &.button-primary.uk-active {
+    background-color: darken($primary-color, 10%);
+    color: #fff;
+  }
+
+
+
+}

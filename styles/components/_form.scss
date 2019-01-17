@@ -1,0 +1,86 @@
+@import "variables";
+
+$checkbox-checked-svg-white: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMuOTk5OTk5OTk5OTk5OTk4IiBoZWlnaHQ9IjExIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoKIDxnPgogIDx0aXRsZT5iYWNrZ3JvdW5kPC90aXRsZT4KICA8cmVjdCBmaWxsPSJub25lIiBpZD0iY2FudmFzX2JhY2tncm91bmQiIGhlaWdodD0iNDAyIiB3aWR0aD0iNTgyIiB5PSItMSIgeD0iLTEiLz4KIDwvZz4KIDxnPgogIDx0aXRsZT5MYXllciAxPC90aXRsZT4KICA8cG9seWdvbiBpZD0ic3ZnXzEiIHBvaW50cz0iMTIgMSA1IDcuNSAyIDUgMSA1LjUgNSAxMCAxMyAxLjUiIGZpbGw9IiNmZmZmZmYiLz4KIDwvZz4KPC9zdmc+);
+$checkbox-checked-svg-black: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxNCAxMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwb2x5Z29uIGZpbGw9IiMwMDAiIHBvaW50cz0iMTIgMSA1IDcuNSAyIDUgMSA1LjUgNSAxMCAxMyAxLjUiIC8+Cjwvc3ZnPgo=);
+
+
+.form-label {
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input, .select, .textarea {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 10px;
+  background: #fff;
+  color: #4f5f6f;
+  border: 1px solid #e5e5e5;
+  transition: 0.2s ease-in-out;
+  transition-property: color, background-color, border;
+}
+
+.input, .select:not([multiple]):not([size]) {
+  height: 40px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.form-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+}
+
+.form-icon:not(.form-icon-flip) ~ .input {
+  padding-left: 40px !important;
+}
+
+.form-icon:not(a):not(button):not(input) {
+  pointer-events: none;
+}
+
+.input, .select, .textarea, .radio, .checkbox {
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 0;
+  font: inherit;
+}
+
+.radio, .checkbox {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  overflow: hidden;
+  margin-top: -4px;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 1px solid #cccbcb;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transition-property: background-color, border;
+  transition-property: background-color, border;
+}
+
+.radio:focus,
+.checkbox:focus {
+  outline: none;
+}
+.checkbox:checked {
+  background-image: $checkbox-checked-svg-white;
+}
+.radio:checked, .checkbox:checked, .checkbox:indeterminate {
+  background-color: $primary-color;
+  border-color: transparent;
+}

@@ -1,0 +1,88 @@
+@import "variables";
+
+.header {
+  background-color: #d7dde4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  a {
+    color: #4f5f6f;
+    font-weight: 700;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  sup {
+    top: -0.85em;
+    font-weight: 600;
+    color: $primary-color;
+  }
+
+  .user-area {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      display: block;
+      content: " ";
+      width: 1px;
+      height: 24px;
+      top: 50%;
+      margin-top: -12px;
+      background-color: #8b9cb1;
+      position: absolute;
+      left: 0;
+    }
+
+    .user-menu {
+      position: absolute;
+      z-index: 1000;
+      min-width: 15rem;
+      font-size: 1rem;
+      color: $menu-color;
+      text-align: left;
+      background-color: $white;
+      background-clip: padding-box;
+      right: 0;
+      top: 45px;
+      box-shadow: 2px 3px 6px rgba(126, 142, 159, 0.1);
+      border: 1px solid rgba(126, 142, 159, 0.1);
+
+      hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 0 0 -1px 0;
+        padding: 0;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          padding: 10px 15px;
+          color: #4f5f6f;
+
+          > span {
+            color: $primary-color;
+          }
+
+          &:hover {
+            cursor: pointer;
+            background: #f5f5f5;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
